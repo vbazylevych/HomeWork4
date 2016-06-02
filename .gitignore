@@ -2,3 +2,8 @@
 #folder
 .idea/*
 *.iml
+
+#NetBeans
+/nbproject/*
+manifest.mf
+build.xml
