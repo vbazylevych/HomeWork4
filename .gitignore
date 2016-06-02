@@ -2,6 +2,7 @@
 #folder
 .idea/*
 *.iml
+*.class
 
 #NetBeans
 /nbproject/*
