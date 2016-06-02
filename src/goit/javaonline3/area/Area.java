@@ -7,7 +7,8 @@ package goit.javaonline3.area;
 public class Area {
 
     public double countTriangleArea(double side, double height){
-        return (0.5 * side * height);
+
+        return ( 0.5 * side * height);
     }
 
     public double countSquareArea(double side, double hight){

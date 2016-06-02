@@ -1,7 +1,8 @@
+package goit.javaonline3;
+
 import goit.javaonline3.area.Area;
 import goit.javaonline3.distance.Distance;
 import goit.javaonline3.temperature.Temperature;
-
 import java.util.Scanner;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Scanner;
  */
 //What is Runer? Maybe is it Runner? Grammatical errors are not tolerated
 //Class should not be in default package
-public class Runer {
+public class Runner {
 
     public static void main (String[] args){
 
