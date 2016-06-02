@@ -7,6 +7,8 @@ import java.util.Scanner;
 /**
  * Created by Ler4enko on 01.06.2016.
  */
+//What is Runer? Maybe is it Runner? Grammatical errors are not tolerated
+//Class should not be in default package
 public class Runer {
 
     public static void main (String[] args){
