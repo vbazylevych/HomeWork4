@@ -18,20 +18,23 @@ public class Runner {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter side");
-        double side = input.nextDouble();//
-        // тут, конечно, нужно бы делать проверку ввели ли целое число, потому как иначе получаем ошибку.
-        //можно будет потом к этой задачке вернуться и доделать :)
-        System.out.println("Enter hight");
-        double hight = input.nextDouble();
-
-        System.out.println("Triangle area = " + area.countTriangleArea(side, hight));
+        if(input.hasNextDouble()){
+            double side = input.nextDouble();//
+            // тут, конечно, нужно бы делать проверку ввели ли целое число, потому как иначе получаем ошибку.
+            //можно будет потом к этой задачке вернуться и доделать :)
+            System.out.println("Enter hight");
+            if(input.hasNextDouble()){
+                double hight = input.nextDouble();
+                System.out.println("Triangle area with side = " + side + " and hight = "+ hight + " is " + String.format("2%.2f", area.countTriangleArea(side, hight)));
+            }
+        }
         //здесь что-то вычисляется, но если в код не смотреть - не понятно что. Можно указать все данные в выводеЖ
         //"Площадь круга с радиусом 1 равно столько-то"
-        System.out.println("Square area = " + area.countSquareArea(2, 5));
-        System.out.println("Circle area = " + area.countCircleArea(1));
-        System.out.println("From Celsii to Faringete = " + temperature.fromCelsiiToFaringet(100500));
-        System.out.println("From Faringate to Celsii = " + temperature.fromFaringetToCelsii(100500));
-        System.out.println("Distance = " + distance.counDistance(0, 5, 0, 5));
+        System.out.println("Square area with side = 2.0 and hight = 5.0 is " + String.format("%.2f", area.countSquareArea(2, 5)));
+        System.out.println("Circle area with radius 1 is " + String.format("%.2f", area.countCircleArea(1)));
+        System.out.println("100500 graduces from Celsii to Faringete is " + String.format("%.2f", temperature.fromCelsiiToFaringet(100500)));
+        System.out.println("100500 graduces from Faringate to Celsii is " + String.format("%.2f", temperature.fromFaringetToCelsii(100500)));
+        System.out.println("Distance beatween (0;0) and (0;5) = " + String.format("%.2f", distance.counDistance(0, 0, 0, 5)));
         //как на счет обрезать вывод до двух знаков после запятой? Для красоты
 
     }
