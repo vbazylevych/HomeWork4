@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * Created by Ler4enko on 01.06.2016.
  */
-public class Runner {
+class Runner {
 
     public static void main (String[] args){
 
@@ -16,26 +16,28 @@ public class Runner {
         Distance distance = new Distance();
         Temperature temperature = new Temperature();
         Scanner input = new Scanner(System.in);
-
+        //Длина строки - когда принимают код конвенш, решают, какой будет принята максимальная длина строки.
+        //http://www.oracle.com/technetwork/java/codeconventions-136091.html
+        //Раздели длинные строки на две или три,
         System.out.println("Enter side");
+        //Отлично! Теперь программа не прерывается с ошибкой.
+        //сейчас программа просто пропускает кусок кода, который приведет к ошибке.
+        //Если улучшать ее дальше - можно или вывести сообщение "Вы ввели не корректные данные, поэтому плоьщадь не будет посчтина,
+        //или сделать бесконечный цикл и запрашивать ввести целое число до тех пор, пока его не введут
         if(input.hasNextDouble()){
             double side = input.nextDouble();//
-            // тут, конечно, нужно бы делать проверку ввели ли целое число, потому как иначе получаем ошибку.
-            //можно будет потом к этой задачке вернуться и доделать :)
             System.out.println("Enter hight");
             if(input.hasNextDouble()){
                 double hight = input.nextDouble();
                 System.out.println("Triangle area with side = " + side + " and hight = "+ hight + " is " + String.format("2%.2f", area.countTriangleArea(side, hight)));
             }
         }
-        //здесь что-то вычисляется, но если в код не смотреть - не понятно что. Можно указать все данные в выводеЖ
-        //"Площадь круга с радиусом 1 равно столько-то"
+
         System.out.println("Square area with side = 2.0 and hight = 5.0 is " + String.format("%.2f", area.countSquareArea(2, 5)));
         System.out.println("Circle area with radius 1 is " + String.format("%.2f", area.countCircleArea(1)));
         System.out.println("100500 graduces from Celsii to Faringete is " + String.format("%.2f", temperature.fromCelsiiToFaringet(100500)));
         System.out.println("100500 graduces from Faringate to Celsii is " + String.format("%.2f", temperature.fromFaringetToCelsii(100500)));
         System.out.println("Distance beatween (0;0) and (0;5) = " + String.format("%.2f", distance.counDistance(0, 0, 0, 5)));
-        //как на счет обрезать вывод до двух знаков после запятой? Для красоты
-
+        //graduces, Celsii, Faringete, beatween - нет таких слов
     }
 }

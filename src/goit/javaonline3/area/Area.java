@@ -1,11 +1,12 @@
 package goit.javaonline3.area;
-
+//лишняя строка
 
 /**
  * Created by Ler4enko on 01.06.2016.
  */
 public class Area {
-//форматирование - должно быть одинаковым во всем файле. Нужно решить ставим мы пустую строку или нет в методе с одной строкой
+    // Methods are separated by a blank line
+    //http://www.oracle.com/technetwork/java/codeconventions-150003.pdf
     public double countTriangleArea(double side, double height){
         return (0.5 * side * height);
     }

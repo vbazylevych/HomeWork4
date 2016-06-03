@@ -1,12 +1,12 @@
 package goit.javaonline3.temperature;
-
+//Зачем нужен этот импорт?
 import java.lang.management.GarbageCollectorMXBean;
 
 /**
  * Created by Ler4enko on 01.06.2016.
  */
 public class Temperature {
-
+    //GRADUS, KOEFICIENT, Celsii, Faringet, gradus - нет таких слов
     private static final int INITIAL_GRADUS = 32;
     private static final double KOEFICIENT = 1.8;
 
