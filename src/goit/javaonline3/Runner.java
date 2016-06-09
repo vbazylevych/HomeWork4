@@ -3,6 +3,8 @@ package goit.javaonline3;
 import goit.javaonline3.area.Area;
 import goit.javaonline3.distance.Distance;
 import goit.javaonline3.temperature.Temperature;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -19,17 +21,14 @@ class Runner {
 
         System.out.println("Enter side");
 
-        if(input.hasNextDouble()){
+        try{
             double side = input.nextDouble();
+            double hight = input.nextDouble();
 
-            System.out.println("Enter hight");
-
-            if(input.hasNextDouble()){
-                double hight = input.nextDouble();
-
-                System.out.println("Triangle area with side = " + side + " and hight = "+ hight + " is "
-                        + String.format("2%.2f", area.countTriangleArea(side, hight)));
-            }
+            System.out.println("Triangle area with side = " + side + " and hight = "+ hight + " is "
+                    + String.format("2%.2f", area.countTriangleArea(side, hight)));
+        } catch (InputMismatchException e) {
+            System.out.println("You entered incorrect side or higth. Triangle area won't be counted!");
         }
 
         System.out.println("Square area with side = 2.0 and hight = 5.0 is " + String.format("%.2f", area.countSquareArea(2, 5)));

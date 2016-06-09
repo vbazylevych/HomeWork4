@@ -13,7 +13,8 @@ public class Area {
         return (side * hight);
     }
 
-    public double countCircleArea(double radius) {
+    public double countCircleArea(double radius)
+    {
         return (Math.PI * Math.pow(radius,2));
     }
 }
