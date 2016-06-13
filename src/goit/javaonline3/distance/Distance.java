@@ -10,3 +10,7 @@ public class Distance {
     }
 
 }
+
+//Почему не static methods?
+
+//counDistance() - жертвовать читаемостью ради одного символа?

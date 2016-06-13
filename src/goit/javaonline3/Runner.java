@@ -38,3 +38,9 @@ class Runner {
         System.out.println("Distance beatween (0;0) and (0;5) = " + String.format("%.2f", distance.counDistance(0, 0, 0, 5)));
     }
 }
+
+//Celsii, Faringete, graduces, beatween, higth - grammar mistakes
+
+//area, distance, temperature - какую функциональность несут эти обьекты?
+
+//Почему нет проверки на 0 и отрицательное число?

@@ -18,3 +18,7 @@ public class Area {
         return (Math.PI * Math.pow(radius,2));
     }
 }
+
+//Почему не static methods?
+
+//return (Math.PI * Math.pow(radius,2)); - потерялся отступ
