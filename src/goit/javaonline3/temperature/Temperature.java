@@ -6,14 +6,14 @@ package goit.javaonline3.temperature;
 public class Temperature {
 
     private static final int INITIAL_DEGREE = 32;
-    private static final double KOEFICIENT = 1.8;
+    private static final double COEFFICIENT = 1.8;
 
-    public double fromCelsiusToFahrenheit(double gradus){
-        return(gradus * KOEFICIENT + INITIAL_DEGREE);
+    public static double fromCelsiusToFahrenheit(double degree){
+        return(degree * COEFFICIENT + INITIAL_DEGREE);
     }
 
-    public double fromFahrenheitToCelsius(double gradus){
-        return((gradus - INITIAL_DEGREE) / KOEFICIENT);
+    public static double fromFahrenheitToCelsius(double degree){
+        return((degree - INITIAL_DEGREE) / COEFFICIENT);
     }
 
     public static int getInitialDegree() {
@@ -21,15 +21,15 @@ public class Temperature {
     }
 
     public static double getCoefficient() {
-        return KOEFICIENT;
+        return COEFFICIENT;
     }
 }
 
-//gradus, KOEFICIENT - grammar mistakes
+//gradus, COEFFICIENT - grammar mistakes
 
 //getInitialDegree(), getCoefficient() - думаешь они понядобятся где-то еще?
 
-//getCoefficient() - return KOEFICIENT - не совпадают названия
+//getCoefficient() - return COEFFICIENT - не совпадают названия
 
 //static methods
 
