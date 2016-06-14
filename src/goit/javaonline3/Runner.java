@@ -42,8 +42,6 @@ class Runner {
     }
 }
 
-//Celsii, Faringete, graduces, beatween, higth - grammar mistakes
+//beatween, incorect - grammar mistakes
 
-//area, distance, temperature - какую функциональность несут эти обьекты?
-
-//Почему нет проверки на 0 и отрицательное число?
+//Проверки на 0 все еще нет и более того, площадь треугольнка со сторой или высотой 0 равна 20.

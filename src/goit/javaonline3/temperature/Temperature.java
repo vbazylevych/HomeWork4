@@ -24,12 +24,3 @@ public class Temperature {
         return COEFFICIENT;
     }
 }
-
-//gradus, COEFFICIENT - grammar mistakes
-
-//getInitialDegree(), getCoefficient() - думаешь они понядобятся где-то еще?
-
-//getCoefficient() - return COEFFICIENT - не совпадают названия
-
-//static methods
-
