@@ -24,10 +24,11 @@ class Runner {
             double height = input.nextDouble();
 
             System.out.println("Triangle area with side = " + side + " and height = "+ height + " is "
-                    + String.format("2%.2f", Area.countTriangleArea(side, height)));
+                    + String.format("%.2f", Area.countTriangleArea(side, height)));
         } catch (InputMismatchException e) {
             System.out.println("You entered incorrect side or height. Triangle area won't be counted!");
         }
+
 
         System.out.println("Square area with side = 2.0 and height = 5.0 is " + String.format("%.2f", Area.countSquareArea(2, 5)));
         System.out.println("Circle area with radius 1 is " + String.format("%.2f", Area.countCircleArea(1)));
@@ -35,9 +36,14 @@ class Runner {
                 + String.format("%.2f", Temperature.fromCelsiusToFahrenheit(100500)));
         System.out.println("100500 degrees from Fahrenheit to Celsius is " + String.format("%.2f", Temperature.fromFahrenheitToCelsius(100500)));
         System.out.println("Distance between (0;0) and (0;5) = " + String.format("%.2f", Distance.countDistance(0, 0, 0, 5)));
-//        System.out.println(Area.countTriangleArea(-1, -3));
-//        System.out.println(Area.countSquareArea(-5, -4));
-//        System.out.println(Area.countCircleArea(-5));
+
+        try {
+            System.out.println(Area.countTriangleArea(-1, -3));
+            System.out.println(Area.countSquareArea(-5, -4));
+            System.out.println(Area.countCircleArea(-5));
+        } catch (InputMismatchException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
 
