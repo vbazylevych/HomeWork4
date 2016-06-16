@@ -28,16 +28,30 @@ class Runner {
         } catch (InputMismatchException e) {
             System.out.println("You entered incorrect side or height. Triangle area won't be counted!");
         }
-        // Захардкодженные данные это плохо - надо дописать ввод из клавиатуры для всех параметров
+
         System.out.println("Square area with side = 2.0 and height = 5.0 is " + String.format("%.2f", Area.countSquareArea(2, 5)));
         System.out.println("Circle area with radius 1 is " + String.format("%.2f", Area.countCircleArea(1)));
         System.out.println("100500 degrees from Celsius to Fahrenheit is "
                 + String.format("%.2f", Temperature.fromCelsiusToFahrenheit(100500)));
         System.out.println("100500 degrees from Fahrenheit to Celsius is " + String.format("%.2f", Temperature.fromFahrenheitToCelsius(100500)));
         System.out.println("Distance between (0;0) and (0;5) = " + String.format("%.2f", Distance.countDistance(0, 0, 0, 5)));
+//        System.out.println(Area.countTriangleArea(-1, -3));
+//        System.out.println(Area.countSquareArea(-5, -4));
+//        System.out.println(Area.countCircleArea(-5));
     }
 }
 
-//beatween, incorect - grammar mistakes
+/*
+Output:
+Enter side:
+0,6
+Enter height:
+0,1
+Triangle area with side = 0.6 and height = 0.1 is 20,03
 
-//Проверки на 0 все еще нет и более того, площадь треугольнка со сторой или высотой 0 равна 20.
+mmmm.... something went wrong
+
+раскомментируй стр39-40.
+Чему равны площади квадрата и круга с отрицальными параметрами?
+
+*/
