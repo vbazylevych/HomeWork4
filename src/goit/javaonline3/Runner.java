@@ -28,8 +28,7 @@ class Runner {
         } catch (InputMismatchException e) {
             System.out.println("You entered incorrect side or height. Triangle area won't be counted!");
         }
-
-
+        // Захардкодженные данные это плохо - надо дописать ввод из клавиатуры для всех параметров
         System.out.println("Square area with side = 2.0 and height = 5.0 is " + String.format("%.2f", Area.countSquareArea(2, 5)));
         System.out.println("Circle area with radius 1 is " + String.format("%.2f", Area.countCircleArea(1)));
         System.out.println("100500 degrees from Celsius to Fahrenheit is "
