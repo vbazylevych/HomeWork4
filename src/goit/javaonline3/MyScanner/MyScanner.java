@@ -1,4 +1,4 @@
-package goit.javaonline3.MyScanner;
+package goit.javaonline3.myscanner;
 
 import java.util.Scanner;
 
