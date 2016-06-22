@@ -1,8 +1,8 @@
 package goit.javaonline3;
 
-import goit.javaonline3.myscanner.MyScanner;
 import goit.javaonline3.area.Area;
 import goit.javaonline3.distance.Distance;
+import goit.javaonline3.myscanner.MyScanner;
 import goit.javaonline3.temperature.Temperature;
 
 /**
