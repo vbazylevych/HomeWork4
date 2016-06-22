@@ -7,30 +7,15 @@ import java.util.InputMismatchException;
  */
 public class Area {
 
-    public static double countTriangleArea (double side, double height) throws InputMismatchException {
-
-        if(side <= 0 || height <= 0) {
-            throw new InputMismatchException("Side or height <= 0! Triangle area won't be count!");
-        }
-
+    public static double countTriangleArea (double side, double height) {
         return (0.5 * side * height);
     }
 
-    public static double countSquareArea(double side, double height) throws InputMismatchException {
-
-        if(side <= 0 || height <= 0) {
-            throw new InputMismatchException("Side or height <= 0! Square area won't be count!");
-        }
-
+    public static double countSquareArea(double side, double height) {
         return (side * height);
     }
 
-    public static double countCircleArea(double radius) throws InputMismatchException {
-
-        if(radius <= 0) {
-            throw new InputMismatchException("Radius <= 0! Circle area won't be count");
-        }
-
+    public static double countCircleArea(double radius) {
         return (Math.PI * Math.pow(radius, 2));
     }
 }

@@ -1,11 +1,9 @@
 package goit.javaonline3;
 
+import goit.javaonline3.MyScanner.MyScanner;
 import goit.javaonline3.area.Area;
 import goit.javaonline3.distance.Distance;
 import goit.javaonline3.temperature.Temperature;
-
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 /**
  * Created by Ler4enko on 01.06.2016.
@@ -14,35 +12,49 @@ class Runner {
 
     public static void main (String[] args){
 
-        Scanner input = new Scanner(System.in);
+        MyScanner input = new MyScanner();
 
-        try{
-            System.out.println("Enter side:");
-            double side = input.nextDouble();
+        System.out.println("Enter triangle side:");
+        double side = input.getPositiveDouble();
+        System.out.println("Enter triangle height:");
+        double height = input.getPositiveDouble();
+        System.out.println("Triangle area with side = " + side + " and height = "+ height + " is "
+                    + String.format("%.2f", Area.countTriangleArea(side, height))+ "\n");
 
-            System.out.println("Enter height:");
-            double height = input.nextDouble();
+        System.out.println("Enter square side:");
+        side  = input.getPositiveDouble();
+        System.out.println("Enter square height:");
+        height = input.getPositiveDouble();
 
-            System.out.println("Triangle area with side = " + side + " and height = "+ height + " is "
-                    + String.format("%.2f", Area.countTriangleArea(side, height)));
-        } catch (InputMismatchException e) {
-            System.out.println("You entered incorrect side or height. Triangle area won't be counted!");
-        }
-        // Захардкодженные данные это плохо - надо дописать ввод из клавиатуры для всех параметров
-        System.out.println("Square area with side = 2.0 and height = 5.0 is " + String.format("%.2f", Area.countSquareArea(2, 5)));
-        System.out.println("Circle area with radius 1 is " + String.format("%.2f", Area.countCircleArea(1)));
-        System.out.println("100500 degrees from Celsius to Fahrenheit is "
-                + String.format("%.2f", Temperature.fromCelsiusToFahrenheit(100500)));
-        System.out.println("100500 degrees from Fahrenheit to Celsius is " + String.format("%.2f", Temperature.fromFahrenheitToCelsius(100500)));
-        System.out.println("Distance between (0;0) and (0;5) = " + String.format("%.2f", Distance.countDistance(0, 0, 0, 5)));
+        System.out.println("Square area with side = " + side + " and height = "+ height + " is "
+                + String.format("%.2f", Area.countSquareArea(side, height)) + "\n");
+        System.out.println("Enter circle radius:");
+        double radius  = input.getPositiveDouble();
+        System.out.println("Circle area with radius " + radius +" is "
+                + String.format("%.2f", Area.countCircleArea(radius)) + "\n");
 
-        try {
-            System.out.println(Area.countTriangleArea(-1, -3));
-            System.out.println(Area.countSquareArea(-5, -4));
-            System.out.println(Area.countCircleArea(-5));
-        } catch (InputMismatchException e) {
-            System.out.println(e.getMessage());
-        }
+        System.out.println("Enter Celsius degrees:");
+        double celsius = input.getDouble();
+        System.out.println(celsius +" degrees from Celsius to Fahrenheit is "
+                + String.format("%.2f", Temperature.fromCelsiusToFahrenheit(celsius)) + "\n");
+
+        System.out.println("Enter Fahrenheit degrees:");
+        double fahrenheit = input.getDouble();
+        System.out.println(fahrenheit + " degrees from Fahrenheit to Celsius is "
+                + String.format("%.2f", Temperature.fromFahrenheitToCelsius(fahrenheit)) + "\n");
+
+        System.out.println("Enter x for first dot:");
+        int x1 = input.getInt();
+        System.out.println("Enter y for first dot:");
+        int y1 = input.getInt();
+        System.out.println("Enter x for second dot:");
+        int x2 = input.getInt();
+        System.out.println("Enter y for second dot:");
+        int y2 = input.getInt();
+        System.out.println("Distance between (" + x1+ ";" + y1 + ") and (" + x2 + ";" + y2 + ") = "
+                + String.format("%.2f", Distance.countDistance(x1, y1, x2, y2)) + "\n");
+
+        input.closeScanner();
     }
 }
 
