@@ -69,8 +69,4 @@ public class MyScanner {
         }
         return userInput;
     }
-//test
-    public void lera(){
-
-    }
 }
