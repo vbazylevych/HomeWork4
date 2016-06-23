@@ -54,6 +54,6 @@ class Runner {
         System.out.println("Distance between (" + x1+ ";" + y1 + ") and (" + x2 + ";" + y2 + ") = "
                 + String.format("%.2f", Distance.countDistance(x1, y1, x2, y2)) + "\n");
 
-        input.closeScanner();
+        input.close();
     }
 }
