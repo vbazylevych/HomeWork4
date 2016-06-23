@@ -57,18 +57,3 @@ class Runner {
         input.closeScanner();
     }
 }
-
-/*
-Output:
-Enter side:
-0,6
-Enter height:
-0,1
-Triangle area with side = 0.6 and height = 0.1 is 20,03
-
-mmmm.... something went wrong
-
-раскомментируй стр39-40.
-Чему равны площади квадрата и круга с отрицальными параметрами?
-
-*/

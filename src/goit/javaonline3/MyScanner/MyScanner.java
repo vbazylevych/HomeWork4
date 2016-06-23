@@ -70,3 +70,16 @@ public class MyScanner {
         return userInput;
     }
 }
+
+//scanner.closeScanner() - масло масленное. scanner.close() - так обычно пишут
+
+//double userInput = 0;
+//не нужно явно инициализировать переменные, если они сделаю это автоматически
+
+//double PositiveDouble = 0;
+//code convention about variable name
+
+//private static Scanner scanner = new Scanner(System.in);
+//make it final
+
+//bug with package
