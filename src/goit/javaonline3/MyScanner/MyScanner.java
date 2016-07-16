@@ -13,14 +13,14 @@ public class MyScanner {
     }
 
     public int getPositiveInt() {
-        int PositiveInt = 0;
+        int positiveInt = 0;
 
         while(true) {
-            PositiveInt = getInt();
-            if (PositiveInt < 0) {
+            positiveInt = getInt();
+            if (positiveInt < 0) {
                 System.out.println("You enter value less or equal 0. Please try again.");
             } else {
-                return PositiveInt;
+                return positiveInt;
             }
         }
     }
@@ -71,15 +71,3 @@ public class MyScanner {
     }
 }
 
-//scanner.closeScanner() - масло масленное. scanner.close() - так обычно пишут
-
-//double userInput = 0;
-//не нужно явно инициализировать переменные, если они сделаю это автоматически
-
-//double PositiveDouble = 0;
-//code convention about variable name
-
-//private static Scanner scanner = new Scanner(System.in);
-//make it final
-
-//bug with package

@@ -1,6 +1,5 @@
 package goit.javaonline3.area;
 
-import java.util.InputMismatchException;
 
 /**
  * Created by Ler4enko on 01.06.2016.
@@ -20,12 +19,3 @@ public class Area {
     }
 }
 
-/*
-Что если в методы countSquareArea() и  countCircleArea() передадут или отрицательное число?
-
-Полезно было бы обьявить, что метод throws InputMismatchException.
-Тогда мы будем видеть это в сигнатуре метода, при его вызове. Предупрежден - значит вооружен.
-
-Перед тем, как бросить ошибку, можно вывести что-то полезное, например "вы передали отрицательную сторону треугольника"
-
-*/
